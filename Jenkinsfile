@@ -20,5 +20,14 @@ pipeline{
 				echo 'Pretending to test something...'
 			}
 		}
+
+		stage('User secret'){
+			steps{
+				withCredentials([string(credentialsId:'demo-secret', variable:'MY_SECRET')]){
+					sh 'echo "using secret now..."
+					sh 'echo $MY_SECRET'
+				}
+			}
+		}
 	}
 }
