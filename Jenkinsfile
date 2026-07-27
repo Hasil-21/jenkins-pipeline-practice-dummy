@@ -17,7 +17,7 @@ pipeline{
 
 		stage('Test'){
 			steps{
-				echo 'Pretendind to test something...'
+				echo 'Pretending to test something...'
 			}
 		}
 	}
