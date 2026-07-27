@@ -1,11 +1,19 @@
 pipeline{
-	agent any
+	agent { label 'linux-agent' }
 
 	stages{
 		stage('Checkout'){
 			steps{
 				echo 'Repo already checked out by jenkins at this point'
 				sh 'ls -la'
+			}
+		}
+
+		stage('Where am i'){
+			steps{
+				sh 'hostname'
+				sh 'whoami'
+				sh 'pwd'
 			}
 		}
 
