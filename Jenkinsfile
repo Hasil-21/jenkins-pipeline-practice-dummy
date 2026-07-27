@@ -12,6 +12,7 @@ pipeline{
 		stage('Build'){
 			steps{
 				echo 'Pretending to build something...'
+				echo 'This is running on a feature branch...'
 			}
 		}
 
